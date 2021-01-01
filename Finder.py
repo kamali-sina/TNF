@@ -1,7 +1,7 @@
 import pandas as pd
 
 class Finder():
-    def __init__(self,filepath='../teledb_final_new.csv'):
+    def __init__(self,filepath='../teledb_cleaned.csv'):
         print('booting up...')
         self.df = pd.read_csv(filepath)
         print('ready to go!')
