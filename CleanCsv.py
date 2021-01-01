@@ -31,13 +31,12 @@ class CleanCsv():
 
 if (__name__ == '__main__'):
     if (len(sys.argv) < 3):
-        if (sys.argv[1] == '-h' or sys.argv[1] == '--help'):
+        if (len(sys.argv) < 2):
+            print('no values args were provided!\nusage: \n    $ python3 CleanCsv.py <filepath> <options>\nuse -h for help')
+        elif (sys.argv[1] == '-h' or sys.argv[1] == '--help'):
             print('options: \n\t"dd": drop duplicates\n\t"dn": drop rows including nan')
         else:
-            print('usage: \n\t$ python3 CleanCsv.py <filepath> <options>\nuse -h for help')
-        exit()
-    if (len(sys.argv) < 3):
-        print('usage: \n\t$ python3 CleanCsv.py <filepath> <options>\nuse -h for help')
+            print('no values args were provided!\nusage: \n    $ python3 CleanCsv.py <filepath> <options>\nuse -h for help')
         exit()
     filepath = sys.argv[1]
     options = sys.argv[2:]
