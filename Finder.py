@@ -14,7 +14,7 @@ class Finder():
         print('---------------------')
     
     def _lower_case_column(self,column_name='tele_id'):
-        df.loc[:,column_name] = df[column_name].map(lambda x: x.lower() if (isinstance(x,str) and len(x)!=0) else x)
+        self.df.loc[:,column_name] = self.df[column_name].map(lambda x: x.lower() if (isinstance(x,str) and len(x)!=0) else x)
 
     def _fill_Nan_with_not_availble(self,column_name='tele_id'):
         self.df['tele_id'] = self.df['tele_id'].fillna('N/A')
