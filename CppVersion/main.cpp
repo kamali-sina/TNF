@@ -2,8 +2,8 @@
 #include <pthread.h>
 #include <chrono>
 
-#define FILEPATH "../teledb_cleaned.csv"
-#define ONLYIDFILEPATH "../teledb_only_id.csv"
+#define FILEPATH "../../teledb_cleaned.csv"
+#define ONLYIDFILEPATH "../../teledb_only_id.csv"
 #define NUM_THREADS 1
 
 using namespace std;
